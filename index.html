@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#eaf3f8" />
+  <title>Snowline | 스키 장비 대여</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app"><div class="auth-wrap"><div class="auth-card"><div class="brand"><div class="brand-mark">❄</div><div>snowline<small>SKI RENTAL CLUB</small></div></div><h1>Firebase 인증을 준비하고 있습니다</h1><p class="subtle">인터넷 연결을 확인해 주세요.</p></div></div></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="https://www.gstatic.com/firebasejs/13.3.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/13.3.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/13.3.0/firebase-firestore-compat.js"></script>
+  <script src="firebase-init.js?v=github-pages-1"></script>
+  <script src="app.js?v=github-pages-1"></script>
+  <script>
+    window.setTimeout(() => {
+      if (!window.snowlineAppLoaded) {
+        document.getElementById('app').innerHTML = '<div class="auth-wrap"><div class="auth-card"><h1>앱 스크립트를 불러오지 못했습니다</h1><p class="subtle">run-app.bat을 다시 실행해 주세요. 서버 창에 표시된 오류를 확인하면 원인을 찾을 수 있습니다.</p></div></div>';
+      }
+    }, 4000);
+  </script>
+</body>
+</html>
